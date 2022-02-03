@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+}
+
+button {
+    width: 400px;
+    height: 224px;
+    background-color:#9ed0ff;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #399fff;
+    border-style: ridge;
+    box-shadow: 2px 2px 5px #005aad;
+    margin-top: 64px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#divBotonActividad {
+    margin-left: 47px;
+}
+#divBotonPersona {
+    margin-left: 47px;
+}
+figcaption {
+    display:none; 
+    transition: all .5s;
+    width: 103px;
+    margin-bottom: 9px;
+    top: 322px;
+}
+
+#enlaceActividad:hover > figcaption {
+    position: absolute;
+    text-align: center;
+    display:block;
+    transition: all .5s;
+    margin-left: 206px;
+}
+#enlaceEspacio:hover > figcaption {
+    position: absolute;
+    text-align: center;
+    display:block;
+    transition: all .5s;
+    margin-left: 646px;
+}
+
+#enlaceCategoria:hover > figcaption {
+    position: absolute;
+    text-align: center;
+    display:block;
+    transition: all .5s;
+    margin-left: 1085px;
+}
+#enlaceUsuario:hover > figcaption {
+    position: absolute;
+    text-align: center;
+    display:block;
+    transition: all .5s;
+    margin-left: 1534px;
+}
+#enlacePersona:hover > figcaption {
+    position: absolute;
+    text-align: center;
+    display:block;
+    transition: all .5s;
+    margin-left: 206px;
+    margin-top: 273px;
+}
+#enlaceGrupo:hover > figcaption {
+    position: absolute;
+    text-align: center;
+    display:block;
+    transition: all .5s;
+    margin-left: 646px;
+    margin-top: 273px;
+}
+#enlaceResponable:hover > figcaption {
+    position: absolute;
+    text-align: center;
+    display:block;
+    transition: all .5s;
+    margin-left: 1085px;
+    margin-top: 273px;
+}
+#enlaceAInscripcion:hover > figcaption {
+    position: absolute;
+    text-align: center;
+    display:block;
+    transition: all .5s;
+    margin-left:1534px;
+    margin-top: 273px;
+}

@@ -1,0 +1,131 @@
+
+body{
+    background-color: #FFFF;
+    margin: 0;
+    height: 100%; 
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    
+
+}	
+h1{
+    font-weight: bolder;
+    color: #137fe3;
+}
+h5{
+    font-weight: normal;
+    color: #5e696e;
+}
+span{
+    color: red;
+    font-weight: normal;
+    font-size: 20px;
+}
+nav ul{
+    background-color: #137fe3;
+    margin: 0%;
+    height: 60px;
+}
+nav li{
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 15px;
+    text-align: left;
+    padding-left: 5px;
+}
+nav a{
+    text-decoration: none;
+}
+label{
+    display:inline-block;
+    width: 150px;
+}
+label{
+    display: inline-block;
+    width: 200px;
+}
+#textTitulo{
+    padding-left: 30%;
+}
+#tituloRegistro{
+    color: #5e696e;
+    font-weight: bolder;
+}
+#titulo{
+    text-align: center;
+    padding-left: 30%;
+}
+ #menu{
+    background-color: #137fe3;
+    position: relative;
+    width: 100%;
+    padding-left: 10%;
+ }
+ #logo{
+    font-size:20px;
+    font-style:unset;
+    font-weight: bold;
+    color:#FFFF;
+ }
+ #menuline{
+    font-size: 15px;
+    font-weight: lighter;
+    color: black;
+
+ }
+ #textoMenu{
+    font-size: 11px;
+    color: black;
+
+ }
+ #RegistroForm{
+    padding-left: 30%;
+ }
+
+ #fotoPersona{
+    display: inline-block; 
+    content: 'Selecciona una imagen';
+    background-color: #FFFF;
+    width: 350px;
+ }
+
+ #formularioAcesso{
+    padding-left: 30%;
+ }
+
+ #divButtom {
+    padding-left: 15%;
+    margin-top: 50px;
+}
+ #buttomRegistro{
+     color: #FFFF;
+     background-color: #137fe3;
+     border: 2px;
+     padding: 10px 29px;
+     text-align: center;
+ }
+ul {
+    background-color:#137fe3;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-left: 800px;
+}
+#esFoto {
+    width: 30px;
+    border-radius: 15px;
+    height: 30px;
+  }
+#enFoto {
+    width: 30px;
+    border-radius: 15px;
+    height: 30px;
+  }
+#gaFoto {
+    width: 30px;
+    border-radius: 15px;
+    height: 30px;
+}
+li {
+    list-style: none;
+    
+}

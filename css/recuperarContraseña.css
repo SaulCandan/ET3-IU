@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+}
+ul {
+    background-color:#137fe3;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-left: 800px;
+}
+#esFoto {
+    width: 30px;
+    border-radius: 15px;
+    height: 30px;
+  }
+#enFoto {
+    width: 30px;
+    border-radius: 15px;
+    height: 30px;
+  }
+#gaFoto {
+    width: 30px;
+    border-radius: 15px;
+    height: 30px;
+}
+li {
+    list-style: none;
+    
+}
+#divRecuperarContraseña {
+    text-align: center;
+    margin-top: 192px;
+    margin-bottom: 169px;
+    width: 480px;
+    height: 300px;
+    padding-top: 72px;
+    margin-left: 644px;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #399fff;
+    border-style: ridge;
+    box-shadow: 2px 2px 5px #005aad;
+}
+label {
+    width: 212px;
+    display: inline-block;
+    margin-bottom: 21px;
+}
+button {
+    margin-top: 77px;
+    background-color:#9ed0ff;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #399fff;
+    border-style: ridge;
+    box-shadow: 2px 2px 5px #005aad;
+}
+#Footer{
+    background-color: #137fe3;
+    vertical-align: bottom;
+    text-align: center;
+    color: white;
+}
+
+
+#MensajeRespuesta {
+    position: absolute;
+    background-color:#90c7fa ;
+    z-index: 1001;
+    top: 380px;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    font-size: large;
+    font-weight: bolder;
+    text-align: center;
+    width: 327px;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #b30000;
+    border-style: ridge;
+    box-shadow: 2px 2px 5px #720101;
+    padding-top: 10px;
+    height: 206px;
+}
+#imagenAviso {
+    width: 50px;
+}
+#imagenCerrar {
+    text-align: right;
+    padding-right: 10px;
+    padding-bottom: 12px;
+    width: 29px;
+}
+#divImagenCerrar {
+    text-align: right;
+    width: 100%;
+}
+#divimagenCerrarRespuesta {
+    text-align: end;
+  }

@@ -1,0 +1,59 @@
+body {
+   margin: 0;
+}
+
+#menuAdministrador{
+    color: white;
+    background-color: #137fe3;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    text-decoration: none;
+    display: inline-grid;
+ }
+ #menuAdministrador ul li {
+    list-style: none;
+    
+ }
+ #menuAdministrador ul li a{
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
+    
+ }
+
+ #Footer{
+     background-color: #137fe3;
+     vertical-align: bottom;
+     text-align: center;
+     color: white;
+ }
+ #usuario {
+   font-size: larger;
+   font-weight: bold;
+ }
+ #idiomas {
+   display: inline;
+ }
+ 
+ #opcionesMenu {
+      display: inline;
+      margin-left: 535px;
+      margin-right: 550px;
+}
+ #esFoto {
+   width: 30px;
+   border-radius: 15px;
+   height: 30px;
+ }
+ #enFoto {
+   width: 30px;
+   border-radius: 15px;
+   height: 30px;
+ }
+ #gaFoto {
+   width: 30px;
+   border-radius: 15px;
+   height: 30px;
+ }

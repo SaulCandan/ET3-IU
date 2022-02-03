@@ -1,0 +1,128 @@
+<html>
+
+<head lang='es'>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="/scripts/gestionPersona.js"></script>
+        
+        <script type="text/javascript" src="/scripts/funcionesGenerales.js"></script>
+        <script type="text/javascript" src="/scripts/funcionesFormularios.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+
+        <script type="text/javascript" src="/Locale/idioma.js"></script>
+        <script type="text/javascript" src="/Locale/Lang_EN.js"></script>
+        <script type="text/javascript" src="/Locale/Lang_ES.js"></script>
+        <script type="text/javascript" src="/Locale/Lang_GA.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="/recursos/tigra_calendar/1-simple-calendar/tcal.js"></script>
+         <link rel="stylesheet" type="text/css" href="/recursos/tigra_calendar/1-simple-calendar/tcal.css">
+
+        <link rel="stylesheet" type="text/css" href="/css/tablas.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/menus.css"/>
+</head>      
+
+<body onload="includeMenuAdministrador();includeFooter();validaAutenticado();getLisPersonas();setLang('');">
+        <div id="menuAdministrador"></div>
+        <div id="Funciones">
+                <div style="display: inline;"><a onclick = 'javascript:showInsertarPersona();'><img src="/images/add.png" width="50" height="50" alt="Insertar"/></a> </div>
+                <div style="display: inline;"><a onclick = 'javascript:showBuscarPersona();'><img src="/images/search.png" width="50" height="50" alt="Consultar"/></a>  </div>
+        </div>
+
+        <div id="acceso-denegado" style="display: none;background-color: red;">
+                <div id="divImagenCerrar"><img src="/images/close.png" id="imagenCerrar" alt="cerrar" width="30px" height="30px" onclick='expulsar()'></div>
+                <div><img src="/images/denegado.png" width="50" height="50" alt="denegado">
+                <div class="02109"></div>
+                </div>
+            </div>
+
+        <div id="divTabla">
+                <table id="tablaPersonas">
+                        <thead >
+                                <th class="dni_persona">
+                                </th>
+                                <th class="nombre_persona">
+                                </th>
+                                <th class="apellidos_persona">
+                                </th>
+                                <th class="email_persona">
+                                </th>
+                                <th class="foto_persona">
+                                </th>
+                                <th class="Consultar"></th> 
+                                <th class="Editar"></th> 
+                                <th class="Eliminar"></th> 
+                        </thead>
+                        <tbody id="datosPersonas">
+
+                        </tbody>
+                        </tbody>
+                </table>
+        </div>
+
+        <a href="/web/Principal/principalAdministrador.html"><img src="/images/back.png" width="50px"  /></a>
+
+        <div id='divformgenerico' style="display:none">
+                <div id="tituloForms"></div>
+                <a onclick = "resetearformulariopersona()"><img src = '/images/close.png' width="50px"></a>
+                <form name='formgenericopersona' id='formgenericopersona' method="post" action="" onsubmit="" enctype="multipart/form-data">
+                        <label class='dni_persona'></label>
+                        <input type='text' name='dni_persona' id='txtdnipersona' onblur=''><br>
+                        <div id="errorFormatoDni" style="display: none;color: red;"></div>
+
+                        <label class='nombre_persona'></label>
+                        <input type='text' name='nombre_persona' id='txtnombrepersona' onblur=''><br>
+                        <div id="errorFormatoName" style="display: none;color: red;"></div>
+
+                        <label class='apellidos_persona'> </label>
+                        <input type='text' name='apellidos_persona' id='txtapellidospersona' onblur=''><br>
+                        <div id="errorFormatoApell" style="display: none;"></div>
+
+                        <label class='fechaNacimiento_persona'></label>
+                        <input type='input' name='fechaNacimiento_persona' id='txtfechanacimientopersona' class="tcal"  readonly='true' onblur=''><br>
+                        <div id="errFechaNacimiento" style="display: none;"><small ></small></div>
+
+                        <label class='direccion_persona'></label>
+                        <input type='text' name='direccion_persona' id='txtdireccionpersona' onblur=''><br>
+                        <div id="errorFormatoDirr" style="display: none;"></div>
+
+                        <label class='telefono_persona'></label>
+                        <input type='text' name='telefono_persona' id='txttelefonopersona' onblur=''><br>
+                        <div id="errorFormatoPhone" style="display: none;"></div>
+
+                        <label class='email_persona'></label>
+                        <input type='text' name='email_persona' id='txtemailpersona' onblur=''><br>
+                        <div id="errorFormatoEmail" style="display: none;"></div>
+                        
+                        <label class='foto_persona' id='labeltxtfotopersona'></label>
+                        <input type='text' name='foto_persona' id='txtfotopersona' onblur=''><br>
+                        <div id="errorFormatoPhoto" style="display: none;"></div>
+                        
+                        <label class='subefoto_persona'id ='labeltxtsubefotopersona'></label>
+                        <input type='file' name='foto_persona' id='txtsubefotopersona'><br>
+                        <div id="errorFormatosubePhoto" style="display: none;"></div>
+
+                        <label class='esCeliaco_persona'></label>
+                        <select name='esCeliaco_persona' id='txtesceliacopersona' >
+                                <option value="0">Si</option>
+                                <option value="1">No</option>
+                        </select><br>
+                        <label class='borrado_persona'></label>
+                        <select name='borrado_persona' id='txtborradopersona' >
+                                <option value="0">Si</option>
+                                <option value="1">No</option>
+                        </select>
+
+                        <br>
+                        <button type='submit'><img  id="iconoAcciones" src="" width="50px"/></button><br>
+                </form>
+        </div>        
+
+<div id="MensajeRespuesta" style="display: none;">
+        <div id="divimagenCerrarRespuesta"><a onclick = "javascript:cerrar('MensajeRespuesta');"><img src="/images/close.png" id="imagenCerrar" width="30px" height="30px" alt="cerrar"/></a></div>
+        <img id="imagenAviso" width="25px">
+        <div id="errmensaje"></div>
+</div>
+            <br>
+            <div id="Footer"></div>
+</body>
+</html>

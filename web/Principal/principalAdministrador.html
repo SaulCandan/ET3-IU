@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="/scripts/funcionesGenerales.js"></script>
+
+    <script type="text/javascript" src="/scripts/funcionesGenerales.js"></script>
+    <script type="text/javascript" src="/scripts/funcionesFormularios.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+
+    <script type="text/javascript" src="/Locale/idioma.js"></script>
+    <script type="text/javascript" src="/Locale/Lang_EN.js"></script>
+    <script type="text/javascript" src="/Locale/Lang_ES.js"></script>
+    <script type="text/javascript" src="/Locale/Lang_GA.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/menus.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/principal.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/tablas.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="inicio"></title>
+</head>
+
+<body onload="includeMenuAdministrador();includeFooter();validaAutenticado();setLang('')">
+    <div id="menuAdministrador"> </div>
+
+    <div id="acceso-denegado" style="display: none;background-color: red;">
+        <div id="divImagenCerrar"><img src="/images/close.png" id="imagenCerrar" alt="cerrar" width="30px" height="30px" onclick='expulsar()'></div>
+        <div><img src="/images/denegado.png" width="50" height="50" alt="denegado">
+        <div class="02109"></div>
+        </div>
+    </div>
+
+    <div id="enlaces">
+        <div id="enlaceActividad" style="display: inline;">
+            <button id="divBotonActividad" onclick="location.href='/web/CRUD/CRUDActividad.html';" ><img  src="/images/actividad.png" class="actividades" title="actividades"></button>
+            <figcaption class="actividadesPrincipal"></figcaption>
+        </div>
+        <div id="enlaceEspacio" style="display: inline;">
+            <button onclick="location.href='/web/CRUD/CRUDEspacio.html';" ><img src="/images/espacio.png" class="espacios" title="espacios"></button>
+            <figcaption class="espaciosPrincipal"></figcaption>
+        </div>
+        <div id="enlaceCategoria" style="display: inline;">
+            <button onclick="location.href='/web/CRUD/CRUDCategoria.html';" ><img src="/images/categoria.png" title="categorias"></button>
+            <figcaption class="categoriasPrincipal"></figcaption>
+        </div>
+        <div id="enlaceUsuario" style="display: inline;">
+            <button onclick="location.href='/web/CRUD/CRUDUsuario.html';" ><img src="/images/usuario.png" title="usuarios"></button>
+            <figcaption class="usuariosPrincipal"></figcaption>
+        </div>
+        <div id="enlacePersona" style="display: inline;">
+            <button id="divBotonPersona" onclick="location.href='/web/CRUD/CRUDPersona.html';" ><img src="/images/persona.png" title="personas"></button>
+            <figcaption class="personasPrincipal"></figcaption>
+        </div>
+        <div id="enlaceGrupo" style="display: inline;">
+            <button onclick="location.href='/web/CRUD/CRUDGrupo.html';" ><img src="/images/grupo.png" title="grupos"> </button>
+            <figcaption class="gruposPrincipal"></figcaption>
+        </div>
+        <div id="enlaceResponable" style="display: inline;">
+            <button onclick="location.href='/web/CRUD/CRUDResponsable.html';" ><img src="/images/responsable.png" title="responsables"></button>
+            <figcaption class="responsablesPrincipal"></figcaption>
+        </div>
+        <div id="enlaceAInscripcion"style="display: inline;">
+            <button onclick="location.href='/web/CRUD/CRUDInscripcion.html';" ><img src="/images/inscripcion.png" title="inscripciones"></button>
+            <figcaption class="inscripcionesPrincipal"></figcaption>
+        </div>
+    </div>
+
+    <div id="Footer"> </div>
+</body>
+
+</html>

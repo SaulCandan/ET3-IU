@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="/scripts/funcionesGenerales.js"></script>
+    <script type="text/javascript" src="/scripts/login.js"></script>
+    <script type="text/javascript" src="/scripts/md5.js"></script>
+    <script type="text/javascript" src="/scripts/funcionesFormularios.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <link rel="stylesheet" type="text/css" href="/css/menus.css"/>
+    <script type="text/javascript" src="/Locale/idioma.js"></script>
+    <script type="text/javascript" src="/Locale/Lang_EN.js"></script>
+    <script type="text/javascript" src="/Locale/Lang_ES.js"></script>
+    <script type="text/javascript" src="/Locale/Lang_GA.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="saludoLOGIN"></title>
+</head>
+
+<body onload="includeFooter(); setLang('');">
+    <div class=login>
+    <h1 class="bienvenida"></h2>
+        <form name="loginForm" id="loginForm" method="post" action="javascript:login();" onsubmit="comprobarLogin()">
+            <input type="text" id="txtusuario" name="usuario" placeholder="Usuario" onblur='checkUser("txtusuario","errusuario")'>
+            <br>
+            <div id="errusuario" style="display: none;"></div>
+            <input type="password" id="txtpassword" name="contrasena" placeholder="Contraseña" onblur='checkPass("txtpassword","errpassword")'>
+            <div id="errpassword" style="display: none;"></div>
+            <br>
+            <button type='submit' class="botones"><img  id="iconoAcciones" src="/images/log.png" width="50px"/></button><br>
+            <div id="mensajeError" style="display: none;"></div>
+        </form>
+        <button type='submit' class="botones" onclick="window.location.href='/web/Principal/registro.html'"><img  id="iconoAcciones" src="/images/registrar.png" width="50px"/></button><br>
+        <br>
+        <p class="olvidarContraseña"> <br></p>
+         <p><a class="olvidarContraseña2" href="/web/Principal/recuperarPassword.html">Proba recuperar contraseña</a></p>
+        <li>
+            <a onclick="setLang('ES')" id="es"><img src="/images/espanol.png"/></a>
+            <a onclick="setLang('EN')" id="en"><img src="/images/ingles.png"/></a>
+            <a onclick="setLang('GA')" id="ga"><img src="/images/gallego.png"/></a> 
+            </li> 
+    
+    </div>
+    <div id="Footer"> </div>
+</body>
+
+</html>

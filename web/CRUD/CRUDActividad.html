@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script type="text/javascript" src="/scripts/gestionActividad.js"></script>
+
+    <script type="text/javascript" src="/scripts/funcionesGenerales.js"></script>
+    <script type="text/javascript" src="/scripts/funcionesFormularios.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript" src="/Locale/idioma.js"></script>
+    <script type="text/javascript" src="/Locale/Lang_EN.js"></script>
+    <script type="text/javascript" src="/Locale/Lang_ES.js"></script>
+    <script type="text/javascript" src="/Locale/Lang_GA.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/tablas.css" />
+    <link rel="stylesheet" type="text/css" href="/css/menus.css" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="actividades"></title>
+</head>
+
+<body onload="includeMenuAdministrador();includeFooter();obtenerListadoactividades();validaAutenticado();setLang('')">
+    <div id="menuAdministrador"> </div>
+
+    <div id="acceso-denegado" style="display: none;background-color: red;">
+        <div id="divImagenCerrar"><img src="/images/close.png" id="imagenCerrar" alt="cerrar" width="30px" height="30px" onclick='expulsar()'></div>
+        <div><img src="/images/denegado.png" width="50" height="50" alt="denegado">
+        <div class="02109"></div>
+        </div>
+    </div>
+
+    <div id="Funciones">
+        <div style="display: inline;">
+            <a onclick='javascript:showInsertaractividad();'><img src="/images/add.png" width="50" height="50" alt="Consultar" /></a>
+        </div>
+        <div style="display: inline;">
+            <a onclick='javascript:showBuscaractividad();'><img src="/images/search.png" width="50" height="50" alt="Buscar" /></a>
+        </div>
+    </div>
+    <div id="divTabla">
+        <table id="tablaactividad">
+            <thead>
+                <th class="nombre_actividad">
+                </th>
+                <th class="descripcion_actividad">
+                </th>
+                <th class="precio_actividad">
+                </th>
+                <th class="numPlazas_actividad">
+                </th>
+                <th class="color_actividad">
+                </th>
+                <th class="color_nombre_actividad">
+                </th>
+                <th class="id_categoria">
+                </th>
+                <th class="id_espacio">
+                </th>
+                <th class="Consultar"></th>
+                <th class="Editar"></th>
+                <th class="Eliminar"></th>
+            </thead>
+            <tbody id="datosactividad">
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <a href="/web/Principal/principalAdministrador.html"><img src="/images/back.png" width="50px" /></a>
+
+    <div id='divformgenerico' style="display:none">
+        <div id="tituloForms"></div>
+        <a onclick="resetearformularioactividad()"><img src='/images/close.png' width="50px"></a>
+        <form name='formgenericoactividad' id='formgenericoactividad' method="post" action="" onsubmit="" enctype="multipart/form-data">
+            <label class='nombre_actividad'></label>
+            <input type='text' name='nombre_actividad' id='txtnombreactividad' onblur=''><br>
+            <div id="errnombreactividad"><small style="color: red;"></small></div><br>
+            <label class='descripcion_actividad'></label>
+            <input type='text' name='descripcion_actividad' id='txtdescripcionactividad' onblur=''><br>
+            <div id="errdescripcionactividad"><small style="color: red;"></small></div><br>
+            <label class='precio_actividad'></label>
+            <input type='text' name='precio_actividad' id='txtprecioactividad' onblur=''><br>
+            <div id="errprecioactividad"><small style="color: red;"></small></div><br>
+            <label class='numPlazas_actividad'></label>
+            <input type='text' name='numPlazas_actividad' id='txtnumplazasactividad' onblur=''><br>
+            <div id="errnumplazasactividad"><small style="color: red;"></small></div><br>
+            
+            <label class='color_actividad'></label>
+            <input type='text' name='color_actividad' id='coloractividad' onblur='' style="display:none">
+            <input type='color' name='color_actividad_picker' id='txtcoloractividad' value="#ff0000" onblur='rellenarColor("txtcoloractividad","coloractividad")'><br>
+            <div id="errcoloractividad"><small style="color: red;"></small></div><br>
+            <label class='color_nombre_actividad'></label>
+            <input type='text' name='color_nombre_actividad' id='colornombreactividad' onblur='' style="display:none">
+            <input type='color' name='color_nombre_actividad_picker' id='txtcolornombreactividad' value="#ff0000" onblur='rellenarColor("txtcolornombreactividad","colornombreactividad")'><br>
+            <div id="errcolornombreactividad"><small style="color: red;"></small></div><br>
+            <label class='nombre_espacio'></label>
+            <select name="id_espacio" id="txtnombreespacio">
+                        </select><br>
+            <label class='nombre_categoria'></label>
+            <select name="id_categoria" id="txtnombrecategoria">
+                        </select><br>
+
+            <br>
+            <button type='submit'><img  id="iconoAcciones" src="" width="50px"/></button><br>
+        </form>
+    </div>
+    <div id="MensajeRespuesta" style="display: none;">
+        <div id="divimagenCerrarRespuesta"><a onclick = "javascript:cerrar('MensajeRespuesta');"><img src="/images/close.png" id="imagenCerrar" width="30px" height="30px" alt="cerrar"/></a></div>
+        <img id="imagenAviso" width="25px">
+        <div id="errmensaje"></div>
+</div>
+    <div id="Footer"></div>
+</body>
+
+</html>

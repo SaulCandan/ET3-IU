@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="/scripts/gestionResponsable.js"></script>
+
+    <script type="text/javascript" src="/scripts/funcionesGenerales.js"></script>
+    <script type="text/javascript" src="/scripts/funcionesFormularios.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript" src="/Locale/idioma.js"></script>
+    <script type="text/javascript" src="/Locale/Lang_EN.js"></script>
+    <script type="text/javascript" src="/Locale/Lang_ES.js"></script>
+    <script type="text/javascript" src="/Locale/Lang_GA.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/tablas.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/menus.css"/>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="responsables"></title>
+</head> 
+
+<body onload="includeMenuAdministrador();includeFooter();obtenerListadoResponsables();validaAutenticado();setLang('')">
+    <div id="menuAdministrador"> </div>
+
+    <div id="acceso-denegado" style="display: none;background-color: red;">
+        <div id="divImagenCerrar"><img src="/images/close.png" id="imagenCerrar" alt="cerrar" width="30px" height="30px" onclick='expulsar()'></div>
+        <div><img src="/images/denegado.png" width="50" height="50" alt="denegado">
+        <div class="02109"></div>
+        </div>
+    </div>
+
+    <div id="Funciones">
+        <div style="display: inline;"><a onclick = 'javascript:showInsertarResponsable();'><img src="/images/add.png" width="50" height="50" alt="Consultar"/></a> </div>
+        <div style="display: inline;"><a onclick = 'javascript:showBuscarResponsable();'><img src="/images/search.png" width="50" height="50" alt="Consultar"/></a>  </div>
+</div>
+
+
+    <div id="divTabla">
+        <table id="tablaResponsable">
+                <thead>
+                    <th class="dni_responsable"></th>
+                    <th class="curriculum_responsable"></th>
+                    <th class="numCuenta_responsable"></th>
+                    <th class="Consultar"></th>
+                    <th class="Editar"></th>
+                    <th class="Eliminar"></th>
+                </thead>
+                <tbody id="datosResponsable">
+                </tbody>
+        </table>
+    </div> 
+
+
+    <a href="/web/Principal/principalAdministrador.html"><img src="/images/back.png" width="50px"  /></a>
+    
+    <div id='divformgenerico' style="display:none">
+        <div id="tituloForms"></div>
+        <a onclick="javascript:resetearformularioresponsable()"><img src='/images/close.png' width="50px"></a>
+        <form name='formgenericoResponsable' id='formgenericoResponsable' method="post" action="" onsubmit="" enctype="multipart/form-data">
+                
+                <label class='dni_responsable'></label>
+                <input type='text' name='dni_responsable' id='txtdniresponsable' onblur=''><br>
+                <div id="errdniresponsable"><small style="color: red;"></small></div><br>
+                
+                <label class='curriculum_responsable'  id='labeltxtcurriculumresponsable'></label>
+                <input type='text' id='txtcurriculumresponsable' onblur=''><br>
+                <div id="errcurriculumresponsable"><small style="color: red;"></small></div><br>
+                
+                <label class='curriculum_responsable'  id='labeltxtsubecurriculumresponsable'></label>
+                <input type='file' name='curriculum_responsable' id='txtsubecurriculumresponsable' onblur=''><br>
+                <div id="errsubecurriculumresponsable"><small style="color: red;"></small></div><br>
+                
+                <label class='numCuenta_responsable' id='labeltxtnumCuentaresponsable'></label>
+                <input type='text' name='numCuenta_responsable' id='txtnumCuentaresponsable' onblur=''><br>
+                <div id="errnumCuentaresponsable"><small style="color: red;"></small></div><br>
+                </select><br>
+                <label class='borrado_responsable'></label>
+                <select name='borrado_responsable' id='txtborradoresponsable'>
+                    <option value="1" class="NO"></option>
+                    <option value="0" class="SI"></option>
+                </select><br>
+
+                <button type='submit'><img  id="iconoAcciones" src="" width="50px"/></button><br>
+        </form>
+</div>        
+
+<div id="MensajeRespuesta" style="display: none;">
+    <div id="divimagenCerrarRespuesta"><a onclick = "javascript:cerrar('MensajeRespuesta');"><img src="/images/close.png" id="imagenCerrar" width="30px" height="30px" alt="cerrar"/></a></div>
+    <img id="imagenAviso" width="25px">
+    <div id="errmensaje"></div>
+</div>
+
+<div id="Footer"></div>
+</body>
+</html>
